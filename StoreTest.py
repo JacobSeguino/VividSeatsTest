@@ -55,9 +55,10 @@ def lowToHigh(low, high):
 def getRawNumber(setWord):
     num = raw_input("Please enter a {0} price:".format(setWord))
     while not num.isdigit():
-        num = raw_input("Sorry, that was not a number. Please, enter a number:")
+        num = raw_input("Sorry, \"{0}\" a number. Please, enter a number:".format(num))
     return (int(num))
 
+#function to print out the store list
 def printStores():
     for i in store:
         print i
