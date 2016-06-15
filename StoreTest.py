@@ -26,8 +26,7 @@ def addStore(name, low, high):
     newStore = [name, low, high]
     store.append(newStore)
     print "the new store list is:"
-    for i in store:
-        print i
+    printStores()
 
 #for adding stores if you want to have the use put their input
 def addInputStores():
@@ -54,17 +53,22 @@ def lowToHigh(low, high):
 
 #check to see if the input is a number or not
 def getRawNumber(setWord):
-    num = (int(raw_input("Please enter a {0} price:".format(setWord))))
+    num = raw_input("Please enter a {0} price:".format(setWord))
     while not num.isdigit():
         num = raw_input("Sorry, that was not a number. Please, enter a number:")
-    return num
+    return (int(num))
+
+def printStores():
+    for i in store:
+        print i
 
 HiLow(2500, 5000)
-# HiLow(3000, 6000)
-# HiLow(200, 400)
-# HiLow(12000, 15000)
-# HiLow(900, 7000)
-# HiLow(2000, 1000)
+#HiLow(3000, 6000)
+#HiLow(200, 400)
+#HiLow(12000, 15000)
+#HiLow(900, 7000)
+#HiLow(2000, 1000)
+#addInputStores()
 #hiLowUserInput()
 
 print "have a nice day"
